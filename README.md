@@ -1,2 +1,2 @@
-# Libary
-My Libary program for learning C++
+# Library
+My Library program for learning C++
