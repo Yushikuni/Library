@@ -10,4 +10,4 @@ TODO:
     - Login information    
     - Show All User record READ ONLY    
 2. Test it for all!!
-3. Add this to portfolio!!
+3. Add to portfolio
