@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# visual studio 2022 ignore files
+*vs/
+*x64/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.h
+*.cpp
