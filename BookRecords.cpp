@@ -1,13 +1,9 @@
 
 #include <iostream>
-
 #include "BookRecords.h"
 
 //inicialization of book record
-void BookRecords::BookRecord()
-{
-
-}
+void BookRecords::BookRecord(){}
 
 // Add new Book Record
 void BookRecords::AddNewBookRecord()
@@ -32,4 +28,47 @@ void BookRecords::AddNewBookRecord()
     std::cin >> BookAbout;
 
     std::cout << "New Book has been added!\n";
+}
+
+// Update existing book record
+void BookRecords::UpdateBookRecord()
+{
+
+}
+
+// Delete Book report
+void BookRecords::DeleteBookRecord()
+{
+
+}
+
+// Is book borrowed at this time?
+bool BookRecords::OnBorrowedTime()
+{
+
+}
+
+// If user is not logged, print all book record
+void BookRecords::PrintAllRecord()
+{
+
+}
+
+// Prining after user is logged
+void BookRecords::PrintUserRecord()
+{
+
+}
+
+
+// Is User Logged?
+bool BookRecords::UserIsLogged()
+{
+
+}
+
+// Print All user information such as a Username, Book borrowed history
+void BookRecords::PrintUserInformations()
+{
+
 }

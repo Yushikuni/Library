@@ -8,6 +8,7 @@ My Library program for learning C++
     - Update existing record    
     - Print All records    
     - Login information    
-    - Show All User record READ ONLY    
+    - Show All User record READ ONLY  
+    - Make it read and write to file(s)  
 2. Test it for all!!
 3. Add to portfolio
