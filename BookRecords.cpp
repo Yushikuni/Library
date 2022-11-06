@@ -33,38 +33,39 @@ void BookRecords::AddNewBookRecord()
 // Update existing book record
 void BookRecords::UpdateBookRecord()
 {
-
+    std::cout << "Book has been updated!\n";
 }
 
 // Delete Book report
 void BookRecords::DeleteBookRecord()
 {
-
+    std::cout << "Book was deleted!!\n";
 }
 
 // Is book borrowed at this time?
 bool BookRecords::OnBorrowedTime()
 {
-
+    std::cout << "Book is borowed\n";
+    return true;
 }
 
 // If user is not logged, print all book record
 void BookRecords::PrintAllRecord()
 {
-
+    std::cout << "Printing All records!!!\n";
 }
 
 // Prining after user is logged
 void BookRecords::PrintUserRecord()
 {
-
+    std::cout << "!!!Printing User Record!!!!!\n";
 }
 
 
 // Is User Logged?
-bool BookRecords::UserIsLogged()
+bool BookRecords::UserIsLogged(bool OutUserIsLoged) const
 {
-
+    return OutUserIsLoged;
 }
 
 // Print All user information such as a Username, Book borrowed history

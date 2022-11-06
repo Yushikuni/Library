@@ -5,6 +5,7 @@ class BookRecords
 public:
     // Inicalization
     void BookRecord();
+
     // Read and Update Records on screen and file(s)
     void AddNewBookRecord();
     void UpdateBookRecord();
@@ -13,10 +14,16 @@ public:
     // Print record form file
     void PrintAllRecord();
 
+protected:
+    // Is user loged successfully?
+    bool UserIsLoged = false;
+
+public:
     // Print record from file
-    bool UserIsLogged();
+    bool UserIsLogged(bool OutUserIsLoged) const;
     bool OnBorrowedTime();
     void PrintUserRecord();
     void PrintUserInformations();
+
 };
 
