@@ -11,7 +11,8 @@ void BookRecords::BookRecord() {}
 // Add new Book Record
 void BookRecords::AddNewBookRecord()
 {
-    std::fstream BookFile("BookSheet.txt");
+    std::ofstream BookFile;
+    BookFile.open("BookSheet.txt", std::ios::app);
     std::cout << "Adding a new Book recod:\n";
     std::string BookAuthor;
     std::string BookName = "Unknow";
@@ -77,28 +78,15 @@ void BookRecords::PrintAllRecord()
         std::string TipeLine;
         while (std::getline(BookSheet, TipeLine))
         {
-            std::cout << TipeLine << " ";
+            std::cout << TipeLine << "\n";
         }
     }
     
     BookSheet.close();
 }
 
-// Prining after user is logged
-void BookRecords::PrintUserRecord()
-{
-    std::cout << "!!!Printing User Record!!!!!\n";
-}
-
-
 // Is User Logged?
 bool BookRecords::UserIsLogged(bool OutUserIsLoged) const
 {
     return OutUserIsLoged;
-}
-
-// Print All user information such as a Username, Book borrowed history
-void BookRecords::PrintUserInformations()
-{
-
 }

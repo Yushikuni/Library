@@ -13,7 +13,7 @@ public:
 
     // Print record form file
     void PrintAllRecord();
-
+private:
     // Is user loged successfully?
     bool UserIsLoged = false;
 
@@ -21,8 +21,6 @@ public:
     // Print record from file
     bool UserIsLogged(bool OutUserIsLoged) const;
     bool OnBorrowedTime();
-    void PrintUserRecord();
-    void PrintUserInformations();
 
 };
 
