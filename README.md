@@ -1,6 +1,12 @@
 # Library
 My Library program for learning C++
 
+## READ ME FIRST
+For sucessful login you must know username and password. 
+Aplication will determinate after 5 unsucessfull attemps.
+
+Username: Vashni 
+Password: TSym5nlf982eWNV
 
 ## TODO:
 1. New Header and Cpp files for
@@ -12,3 +18,7 @@ My Library program for learning C++
     - Make it read and write to file(s)  
 2. Test it for all!!
 3. Add to portfolio
+
+## What I already have done:
+- Writing to txt file
+- Reading from txt file

@@ -14,7 +14,6 @@ public:
     // Print record form file
     void PrintAllRecord();
 
-protected:
     // Is user loged successfully?
     bool UserIsLoged = false;
 
