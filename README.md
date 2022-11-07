@@ -6,6 +6,7 @@ For sucessful login you must know username and password.
 Aplication will determinate after 5 unsucessfull attemps.
 
 Username: Vashni 
+
 Password: TSym5nlf982eWNV
 
 ## TODO:
@@ -20,5 +21,6 @@ Password: TSym5nlf982eWNV
 3. Add to portfolio
 
 ## What I already have done:
+- Login Information required
 - Writing to txt file
 - Reading from txt file
