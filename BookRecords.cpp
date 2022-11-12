@@ -81,7 +81,7 @@ void BookRecords::DeleteBookRecord()
     Temp.close();
     BookSheet.close();
     remove("BookSheet.txt");
-    rename("temp.txt", "BookSheet.txt");
+    //rename("temp.txt", "BookSheet.txt");
     std::cout << "Book was deleted!!\n";
 }
 

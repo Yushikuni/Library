@@ -101,7 +101,7 @@ void Menu(int& MenuOption)
     std::cout << "What do you wanna do?\n";
     std::cout << "1. Add New Book Record\n";
     //std::cout << "2. Update Existing Book Record\n";
-    //std::cout << "3. Delete Existing Book Record\n";
+    std::cout << "3. Delete Existing Book Record\n";
     std::cout << "4. Print All Existing Records\n";
     std::cout << "5. Exit Application\n";
     std::cin >> MenuOption;  
