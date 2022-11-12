@@ -19,6 +19,7 @@ void BookRecords::AddNewBookRecord()
     std::string BookGender = "Unknow";
     std::string PageCount;
     std::string BookAbout = "Unknow";
+    std::string IdentifyNumber = "-1";
     bool isBorrowed = false;
     // Author(s); Publisher; Gender; Page Count (1200 pages); About book;
     std::cout << "Write name of Autor(s):\n";
@@ -36,8 +37,11 @@ void BookRecords::AddNewBookRecord()
     
     std::cout << "Write some interesting about this book:\n";
     std::getline(std::cin, BookAbout, '\n');
+
+    std::cout << "Write Identify Number of the book:\n";
+    std::getline(std::cin, IdentifyNumber, '\n');
     
-    BookFile << BookAuthor << ";" << BookName << ";" << BookGender << ";" << PageCount << ";" << BookAbout << ";\n";
+    BookFile << IdentifyNumber << ";" << BookAuthor << ";" << BookName << ";" << BookGender << ";" << PageCount << ";" << BookAbout << ";\n";
 
     std::cout << "New Book has been added!\n";
     BookFile.close();
@@ -54,6 +58,30 @@ void BookRecords::UpdateBookRecord()
 // Delete Book report
 void BookRecords::DeleteBookRecord()
 {
+    std::string DeleteBookLine;
+    std::string BookLine;
+    std::ifstream BookSheet;// ("BookSheet.txt");   //otevøít textový soubor s daty
+    std::ofstream Temp;// ("temp.txt");             //vytvoøit doèasný texák jako kopii souboru s provedenými zmìnami
+                                                //vymazat doèasný textový soubor 
+
+    BookSheet.open("BookSheet.txt");
+    Temp.open("temp.txt");
+
+    std::cout << "Input Identify nuber of the book for deleting: ";
+    std::cin >> DeleteBookLine;
+
+    while (getline(BookSheet,BookLine))
+    {
+        std::string id(BookLine.begin(), BookLine.begin() + BookLine.find(" "));
+        if (id != DeleteBookLine)
+        {
+            Temp << BookLine << std::endl;
+        }
+    }
+    Temp.close();
+    BookSheet.close();
+    remove("BookSheet.txt");
+    rename("temp.txt", "BookSheet.txt");
     std::cout << "Book was deleted!!\n";
 }
 
@@ -81,7 +109,7 @@ void BookRecords::PrintAllRecord()
             std::cout << TipeLine << "\n";
         }
     }
-    
+
     BookSheet.close();
 }
 
