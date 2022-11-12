@@ -6,6 +6,7 @@
 int main()
 {
     std::cout << "Welcome in Labrary Management System!\nPlease log in:\n";
+    int MenuOption;
     BookRecords BR = BookRecords();
     BR.BookRecord();
 
@@ -23,7 +24,7 @@ int main()
     {
 
         // Begin Main Program Loop
-        int MenuOption;
+       
         Menu(MenuOption);
         switch (MenuOption)
         {
@@ -61,6 +62,30 @@ int main()
                 std::cout << "Too many unsuccessful attempts have been made. The application is terminating";
                 return 5;
 
+            }
+            if (BR.UserIsLogged(Username == UsernameSystem && Password == PasswordSystem))
+            {
+                Menu(MenuOption);
+                switch (MenuOption)
+                {
+                case 1:
+                    BR.AddNewBookRecord();
+                    break;
+                case 2:
+                    BR.UpdateBookRecord();
+                    break;
+                case 3:
+                    BR.DeleteBookRecord();
+                    break;
+                case 4:
+                    BR.PrintAllRecord();
+                    break;
+                case 5:
+                    break;
+                default:
+                    Menu(MenuOption);
+                    break;
+                }
             }
         }
     }   
