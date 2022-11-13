@@ -14,18 +14,6 @@ Password: TSym5nlf982eWNV
 ![AfterLoginAplikace](https://user-images.githubusercontent.com/42646031/201528122-0add8b7f-e0ef-4a9e-94b2-6ea371be807c.png)
 ![OneOfTheOptionsAplikace](https://user-images.githubusercontent.com/42646031/201528123-5f7996d5-6c0f-4c2e-996f-26cab761e1a1.png)
 
-
-## TODO:
-1. New Header and Cpp files for
-    - Add New Book Record   
-    - Update existing record    
-    - Print All records    
-    - Login information    
-    - Show All User record READ ONLY  
-    - Make it read and write to file(s)  
-2. Test it for all
-3. Add to portfolio
-
 ## What I already have done:
 - Login Information required
 - Writing to txt file
