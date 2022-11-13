@@ -60,10 +60,9 @@ void BookRecords::DeleteBookRecord()
 {
     std::string DeleteBookLine;
     std::string BookLine;
-    std::ifstream BookSheet;// ("BookSheet.txt");   //otevøít textovı soubor s daty
-    std::ofstream Temp;// ("temp.txt");             //vytvoøit doèasnı texák jako kopii souboru s provedenımi zmìnami
-                                                //vymazat doèasnı textovı soubor 
-
+    std::ifstream BookSheet;//otevøít textovı soubor s daty //vytvoøit doèasnı texák jako kopii souboru s provedenımi zmìnami
+    std::ofstream Temp; 
+                                                
     BookSheet.open("BookSheet.txt");
     Temp.open("temp.txt");
 
@@ -72,7 +71,7 @@ void BookRecords::DeleteBookRecord()
 
     while (getline(BookSheet,BookLine))
     {
-        std::string id(BookLine.begin(), BookLine.begin() + BookLine.find(" "));
+        std::string id(BookLine.begin(), BookLine.begin() + BookLine.find(";"));
         if (id != DeleteBookLine)
         {
             Temp << BookLine << std::endl;
@@ -81,7 +80,7 @@ void BookRecords::DeleteBookRecord()
     Temp.close();
     BookSheet.close();
     remove("BookSheet.txt");
-    //rename("temp.txt", "BookSheet.txt");
+    rename("temp.txt", "BookSheet.txt");//vymazat doèasnı textovı soubor 
     std::cout << "Book was deleted!!\n";
 }
 
