@@ -62,9 +62,11 @@ int main()
             BR.LogOutMessage(UserIsLogged = false);
             break;
         case 6:
+            BR.LogOutMessage(UserIsLogged = false);
             break;
         default:
-            break;
+            return 6;
+
         }
         // End Main Program Loop
     }
@@ -77,25 +79,12 @@ int main()
 // Just menu Function
 void Menu(int& MenuOption)
 {
-    if (MenuOption <= 6)
-    {
-        std::cout << "What do you wanna do?\n";
-        std::cout << "1. Add New Book Record\n";
-        std::cout << "2. Update Existing Book Record\n";
-        std::cout << "3. Delete Existing Book Record\n";
-        std::cout << "4. Print All Existing Records\n";
-        std::cout << "5. Log out\n";
-        std::cout << "6. Exit Application\n";        
-    }    
+    std::cout << "What do you wanna do?\n";
+    std::cout << "1. Add New Book Record\n";
+    std::cout << "2. Update Existing Book Record\n";
+    std::cout << "3. Delete Existing Book Record\n";
+    std::cout << "4. Print All Existing Records\n";
+    std::cout << "5. Log out\n";
+    std::cout << "6. Exit Application\n";
     std::cin >> MenuOption;
 }
-/*      TODO     */
-//1. New Header and Cpp files for
-// Add New Book Record
-// Update existing record
-// Print All records
-// Login information
-// Show All User record READ ONLY
-// Make it read and write to file(s)
-//2. Test it for all!!
-//3. Add this to portfolio!!
