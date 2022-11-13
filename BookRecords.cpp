@@ -52,12 +52,15 @@ void BookRecords::AddNewBookRecord()
 // Update existing book record
 void BookRecords::UpdateBookRecord()
 {
+
     std::cout << "Book has been updated!\n";
 }
 
 // Delete Book report
 void BookRecords::DeleteBookRecord()
 {
+    PrintAllRecord();
+    std::cout<<"\n";
     std::string DeleteBookLine;
     std::string BookLine;
     std::ifstream BookSheet;//otevøít textový soubor s daty //vytvoøit doèasný texák jako kopii souboru s provedenými zmìnami
