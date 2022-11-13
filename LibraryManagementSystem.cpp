@@ -6,7 +6,7 @@
 int main()
 {
     std::cout << "Welcome in Labrary Management System!\nPlease log in:\n";
-    int MenuOption;
+    int MenuOption, i = 0;
     BookRecords BR = BookRecords();
     BR.BookRecord();
 
@@ -19,10 +19,27 @@ int main()
     std::cin >> Username;
     std::cout << "Password: \n";
     std::cin >> Password;
+    bool UserIsLogged = BR.UserIsLogged(Username == UsernameSystem && Password == PasswordSystem);
 
-    if (Username == UsernameSystem && Password == PasswordSystem)
+    while (!BR.UserIsLogged(UserIsLogged)) 
     {
+        std::cout << "Invalid login\nPlease log in:\n";
+        std::cout << "Username: \n";
+        std::cin >> Username;
+        std::cout << "Password: \n";
+        std::cin >> Password;
 
+        ++i;
+        if (i == 5)
+        {
+            std::cout << "Too many unsuccessful attempts have been made. The application is terminating";
+            return 5;
+        }
+    };
+
+    while (UserIsLogged)
+    {
+        std::cout << "User sucessfully loged into system!!!!" << std::endl;
         // Begin Main Program Loop
        
         Menu(MenuOption);
@@ -41,6 +58,10 @@ int main()
             BR.PrintAllRecord();
             break;
         case 5:
+            BR.UserIsLogged(UserIsLogged = false);
+            BR.LogOutMessage(UserIsLogged = false);
+            break;
+        case 6:
             break;
         default:
             Menu(MenuOption);
@@ -48,48 +69,7 @@ int main()
         }
         // End Main Program Loop
     }
-    else
-    {
-        for (int i = 1; !BR.UserIsLogged(Username == UsernameSystem && Password == PasswordSystem) || i == 5; ++i)
-        {
-            std::cout << "Invalid login\nPlease log in:\n";
-            std::cout << "Username: \n";
-            std::cin >> Username;
-            std::cout << "Password: \n";
-            std::cin >> Password;
-            if (i == 5)
-            {
-                std::cout << "Too many unsuccessful attempts have been made. The application is terminating";
-                return 5;
 
-            }
-            if (BR.UserIsLogged(Username == UsernameSystem && Password == PasswordSystem))
-            {
-                Menu(MenuOption);
-                switch (MenuOption)
-                {
-                case 1:
-                    BR.AddNewBookRecord();
-                    break;
-                case 2:
-                    BR.UpdateBookRecord();
-                    break;
-                case 3:
-                    BR.DeleteBookRecord();
-                    break;
-                case 4:
-                    BR.PrintAllRecord();
-                    break;
-                case 5:
-                    break;
-                default:
-                    Menu(MenuOption);
-                    break;
-                }
-            }
-        }
-    }   
-  
     std::cin.get();
 
     return 0;
@@ -103,7 +83,8 @@ void Menu(int& MenuOption)
     //std::cout << "2. Update Existing Book Record\n";
     std::cout << "3. Delete Existing Book Record\n";
     std::cout << "4. Print All Existing Records\n";
-    std::cout << "5. Exit Application\n";
+    std::cout << "5. Log out\n";
+    std::cout << "6. Exit Application\n";
     std::cin >> MenuOption;  
 }
 /*      TODO     */

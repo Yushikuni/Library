@@ -117,3 +117,8 @@ bool BookRecords::UserIsLogged(bool OutUserIsLoged) const
 {
     return OutUserIsLoged;
 }
+
+void BookRecords::LogOutMessage(bool OutUserIsLogout)
+{
+    std::cout << "Sucessfully Logout from Application. Exiting application" << std::endl;    
+}

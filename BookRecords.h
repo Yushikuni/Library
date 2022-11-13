@@ -21,6 +21,6 @@ public:
     // Print record from file
     bool UserIsLogged(bool OutUserIsLoged) const;
     bool OnBorrowedTime();
-
+    void LogOutMessage(bool OutUserIsLogout);
 };
 
