@@ -52,6 +52,62 @@ void BookRecords::AddNewBookRecord()
 // Update existing book record
 void BookRecords::UpdateBookRecord()
 {
+    PrintAllRecord();
+    std::cout << "\n";
+    std::ofstream BookFile;
+    std::string UpdateBookLine;
+    std::string BookLine;
+    std::ifstream BookSheet;
+    std::ofstream Temp;
+
+    BookSheet.open("BookSheet.txt");
+    Temp.open("temp.txt");
+
+    std::cout << "Input Identify nuber of the book for update: ";
+    std::cin >> UpdateBookLine;
+
+    while (getline(BookSheet, BookLine))
+    {
+        std::string id(BookLine.begin(), BookLine.begin() + BookLine.find(";"));
+        if (id != UpdateBookLine)
+        {
+            Temp << BookLine << std::endl;
+        }
+        else
+        {
+            std::string BookAuthor;
+            std::string BookName = "Unknow";
+            std::string BookGender = "Unknow";
+            std::string PageCount;
+            std::string BookAbout = "Unknow";
+            std::string IdentifyNumber = "-1";
+            // Author(s); Publisher; Gender; Page Count (1200 pages); About book;
+            std::cout << "Write name of Autor(s):\n";
+            std::cin.ignore();
+            std::getline(std::cin, BookAuthor, '\n');
+
+            std::cout << "Write name of Book:\n";
+            std::getline(std::cin, BookName, '\n');
+
+            std::cout << "Write Book gender:\n";
+            std::getline(std::cin, BookGender, '\n');
+
+            std::cout << "Write count pages of the book:\n";
+            std::getline(std::cin, PageCount, '\n');
+
+            std::cout << "Write some interesting about this book:\n";
+            std::getline(std::cin, BookAbout, '\n');
+
+            std::cout << "Write Identify Number of the book:\n";
+            std::getline(std::cin, IdentifyNumber, '\n');
+
+            Temp << IdentifyNumber << ";" << BookAuthor << ";" << BookName << ";" << BookGender << ";" << PageCount << ";" << BookAbout << ";\n";
+        }
+    }
+    Temp.close();
+    BookSheet.close();
+    remove("BookSheet.txt");
+    rename("temp.txt", "BookSheet.txt");//vymazat doèasný textový soubor 
 
     std::cout << "Book has been updated!\n";
 }

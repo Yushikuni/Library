@@ -36,13 +36,14 @@ int main()
             return 5;
         }
     };
-
+    
     while (UserIsLogged)
     {
         std::cout << "User sucessfully loged into system!!!!" << std::endl;
         // Begin Main Program Loop
-       
+
         Menu(MenuOption);
+       
         switch (MenuOption)
         {
         case 1:
@@ -58,13 +59,11 @@ int main()
             BR.PrintAllRecord();
             break;
         case 5:
-            BR.UserIsLogged(UserIsLogged = false);
             BR.LogOutMessage(UserIsLogged = false);
             break;
         case 6:
             break;
         default:
-            Menu(MenuOption);
             break;
         }
         // End Main Program Loop
@@ -78,14 +77,17 @@ int main()
 // Just menu Function
 void Menu(int& MenuOption)
 {
-    std::cout << "What do you wanna do?\n";
-    std::cout << "1. Add New Book Record\n";
-    //std::cout << "2. Update Existing Book Record\n";
-    std::cout << "3. Delete Existing Book Record\n";
-    std::cout << "4. Print All Existing Records\n";
-    std::cout << "5. Log out\n";
-    std::cout << "6. Exit Application\n";
-    std::cin >> MenuOption;  
+    if (MenuOption <= 6)
+    {
+        std::cout << "What do you wanna do?\n";
+        std::cout << "1. Add New Book Record\n";
+        std::cout << "2. Update Existing Book Record\n";
+        std::cout << "3. Delete Existing Book Record\n";
+        std::cout << "4. Print All Existing Records\n";
+        std::cout << "5. Log out\n";
+        std::cout << "6. Exit Application\n";        
+    }    
+    std::cin >> MenuOption;
 }
 /*      TODO     */
 //1. New Header and Cpp files for
