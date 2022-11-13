@@ -10,6 +10,9 @@ Username: Vashni
 Password: TSym5nlf982eWNV
 
 ## PICTURES
+![NazevAplikace](https://user-images.githubusercontent.com/42646031/201528119-3a9823a1-4da1-4c6a-97ce-aea3fb5868a9.png)
+![AfterLoginAplikace](https://user-images.githubusercontent.com/42646031/201528122-0add8b7f-e0ef-4a9e-94b2-6ea371be807c.png)
+![OneOfTheOptionsAplikace](https://user-images.githubusercontent.com/42646031/201528123-5f7996d5-6c0f-4c2e-996f-26cab761e1a1.png)
 
 
 ## TODO:
