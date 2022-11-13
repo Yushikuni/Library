@@ -9,6 +9,9 @@ Username: Vashni
 
 Password: TSym5nlf982eWNV
 
+## PICTURES
+
+
 ## TODO:
 1. New Header and Cpp files for
     - Add New Book Record   
@@ -17,10 +20,11 @@ Password: TSym5nlf982eWNV
     - Login information    
     - Show All User record READ ONLY  
     - Make it read and write to file(s)  
-2. Test it for all!!
+2. Test it for all
 3. Add to portfolio
 
 ## What I already have done:
 - Login Information required
 - Writing to txt file
 - Reading from txt file
+- Update and delete on specific position
