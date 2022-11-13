@@ -76,7 +76,7 @@ int main()
     return 0;
 }
 
-// Just menu Function
+// Menu Function
 void Menu(int& MenuOption)
 {
     std::cout << "What do you wanna do?\n";
