@@ -37,6 +37,4 @@
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
-*.h
-*.cpp
 *.sln
