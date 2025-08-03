@@ -1,13 +1,18 @@
 ﻿#include <iostream>
 
-#include "BookRecords.h"
+//#include "BookRecords.h"
 //#include "LibrarySystem.h"
+#include "/Users/Atlan/OneDrive/Cpp-uceni/Library/src/models/Book.h"
 
 int main()
 {
     std::cout << "Welcome in Labrary Management System!\nPlease log in:\n";
-    int MenuOption, i = 0;
-    BookRecords BR = BookRecords();
+    int i = 0;
+
+    Book book ("The Witcher", "Sapkowski", 2026);
+
+    book.printRecord();
+   /* BookRecords BR = BookRecords();
     BR.BookRecord();
 
     // Adding Login Information
@@ -36,12 +41,12 @@ int main()
             return 5;
         }
     };
-    
+ 
     while (UserIsLogged)
     {
-        std::cout << "User sucessfully loged into system!!!!" << std::endl;
+        std::cout << "User sucessfully loged into system!!!!" << std::endl; */
         // Begin Main Program Loop
-
+/*
         Menu(MenuOption);
        
         switch (MenuOption)
@@ -69,13 +74,13 @@ int main()
 
         }
         // End Main Program Loop
-    }
+    }*/
 
     std::cin.get();
 
     return 0;
 }
-
+/*
 // Menu Function
 void Menu(int& MenuOption)
 {
@@ -88,3 +93,4 @@ void Menu(int& MenuOption)
     std::cout << "6. Exit Application\n";
     std::cin >> MenuOption;
 }
+*/

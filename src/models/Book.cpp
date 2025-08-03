@@ -1,8 +1,15 @@
-#pragma once
-#include <string>
+#include "Book.h"
+#include <iostream>
 
-struct Book
+Book::Book(const std::string& bookName, const std::string& authorName, int releaseDate) :bookName(bookName), authorName(authorName), releaseDate(releaseDate){}
+
+Book::~Book(){}
+
+void Book::printRecord()
 {
+	std::cout << bookName << " by " << authorName << " (" << releaseDate << ")" << std::endl;
+}
+/*
 	std::string bookName;
 	std::string authorName;
 	std::string bookGander;
@@ -12,4 +19,4 @@ struct Book
 	std::string timeReadingTo;
 	std::string bookReviews;
 	std::string notes;
-};
+*/
