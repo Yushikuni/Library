@@ -1,3 +1,28 @@
+## About
+
+**Library** is a hybrid C++/Qt application that simulates a personal library system.  
+The project demonstrates clean code principles, object-oriented design, and the use of design patterns.  
+
+### Key Features
+- 📚 **Book & User management** – add, list, and save books and users.
+- 💾 **Repository pattern** – storage is abstracted, starting with file-based persistence.
+- 🎯 **Recommendation engine** – suggests books based on user history (Strategy pattern).
+- 🖥️ **Qt GUI** – interactive interface for managing books and exploring recommendations.
+- 🧩 **Scalable architecture** – easily extendable with new repositories (e.g., SQLite, REST API).
+
+### Why this project?
+This project is designed as a portfolio piece to showcase:
+- Clean, maintainable C++ code.
+- Practical use of design patterns (Repository, Strategy, Observer, Factory).
+- Experience with hybrid application development (backend logic + UI integration).
+- Ability to transform a simple console project into a full-featured desktop app.
+
+---
+
+
+
+# OLD
+
 # Library
 My Library program for learning C++
 
