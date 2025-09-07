@@ -1,22 +1,22 @@
 #include "Book.h"
-#include <iostream>
+#include <sstream>
 
-Book::Book(const std::string& bookName, const std::string& authorName, int releaseDate) :bookName(bookName), authorName(authorName), releaseDate(releaseDate){}
-
-Book::~Book(){}
-
-void Book::printRecord()
+Book::Book(const std::string& bookName, const std::string& authorName, const std::string& bookGander, int releaseDate, int bookCountPages,
+	const std::string& timeReadingFrom, const std::string& timeReadingTo, const std::string& bookReviews, const std::string& notes)
+	: bookName(bookName), authorName(authorName), bookGander(bookGander), releaseDate(releaseDate), bookCountPages(bookCountPages),
+	timeReadingFrom(timeReadingFrom), timeReadingTo(timeReadingTo), bookReviews(bookReviews), notes(notes)
 {
-	std::cout << bookName << " by " << authorName << " (" << releaseDate << ")" << std::endl;
+	// Tìlo konstruktoru mùže být prázdné
 }
-/*
-	std::string bookName;
-	std::string authorName;
-	std::string bookGander;
-	int releaseDate;
-	int bookCountPages;
-	std::string timeReadingFrom;
-	std::string timeReadingTo;
-	std::string bookReviews;
-	std::string notes;
-*/
+
+Book::~Book()
+{
+	// Tìlo destruktoru mùže být prázdné
+}
+
+std::string Book::getInfoString() const
+{
+	std::stringstream ss;
+	ss << bookName << " by " << authorName << " (" << releaseDate << ")" << std::endl;
+	return ss.str();
+}

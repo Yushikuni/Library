@@ -2,16 +2,19 @@
 
 //#include "BookRecords.h"
 //#include "LibrarySystem.h"
-#include "/Users/Atlan/OneDrive/Cpp-uceni/Library/src/models/Book.h"
+//#include "/Users/Atlan/OneDrive/Cpp-uceni/Library/src/models/Book.h"
+#include"./src/repository/FileRepository.h"
 
 int main()
 {
     std::cout << "Welcome in Labrary Management System!\nPlease log in:\n";
     int i = 0;
 
-    Book book ("The Witcher", "Sapkowski", 2026);
+    //Book book ("The Witcher", "Sapkowski", 2026);
 
-    book.printRecord();
+    //book.printRecord();
+
+
    /* BookRecords BR = BookRecords();
     BR.BookRecord();
 

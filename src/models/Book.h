@@ -15,9 +15,9 @@ private:
 	std::string notes;
 
 public:
-	Book(const std::string& bookName, const std::string& authorName, int releaseDate);
+	Book(const std::string& bookName, const std::string& authorName, const std::string& bookGander, int releaseDate, int bookCountPages,
+		const std::string& timeReadingFrom = "", const std::string& timeReadingTo = "", const std::string& bookReviews = "", const std::string& notes = "");
+
 	~Book();
-
-	void printRecord();
-
+	std::string getInfoString() const;
 };
