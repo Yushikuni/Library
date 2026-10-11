@@ -1,40 +1,43 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
+# Compiled object files
 *.slo
 *.lo
 *.o
 *.obj
 
-# Precompiled Headers
+# Precompiled headers
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
+# Compiled libraries and executables
 *.so
 *.dylib
 *.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
 *.a
 *.lib
-
-# Executables
 *.exe
 *.out
 *.app
+*.d
 
 # visual studio 2022 ignore files
-*vs/
-*x64/
-*.vcxproj
-*.vcxproj.filters
+.vs/
 *.vcxproj.user
-*.sln
+*.aps
+*.VC.db
+*.VC.VC.opendb
+*.ipch
+
+
+# Build
+x64/
+x86/
+Debug/
+Release/
+
+# NuGet (GTest) downloads during the build 
+packages/
+
+# PHP API: never put login credentials in Git
+library_config.php
+config.php
+.env
